@@ -1,2 +1,22 @@
 @import url(/assets/css/imports/imports.css);
+.main .container .calculator-tips .bill .bill-input #bill::-webkit-input-placeholder,
+.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples::-webkit-input-placeholder {
+  text-align: end;
+}
+.main .container .calculator-tips .bill .bill-input #bill:-ms-input-placeholder,
+.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples:-ms-input-placeholder {
+  text-align: end;
+}
+.main .container .calculator-tips .bill .bill-input #bill::-ms-input-placeholder,
+.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples::-ms-input-placeholder {
+  text-align: end;
+}
+.main .container .calculator-tips .bill .bill-input #bill::placeholder,
+.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples::placeholder {
+  text-align: end;
+}
+
+.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples {
+  background: url(/assets/images/icon-person.svg) #fff no-repeat;
+}
 /*# sourceMappingURL=style.css.map */
