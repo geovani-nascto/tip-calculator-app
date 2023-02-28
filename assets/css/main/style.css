@@ -16,6 +16,10 @@
   text-align: end;
 }
 
+.main .container .calculator-tips .bill .bill-input #bill {
+  background: url(/assets/images/icon-dollar.svg) #fff no-repeat;
+}
+
 .main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples {
   background: url(/assets/images/icon-person.svg) #fff no-repeat;
 }
