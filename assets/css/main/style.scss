@@ -1,28 +1,163 @@
 @import url(/assets/css/imports/imports.css);;
 
+$main-color: #00474b;
+$secondary-color: #26c2ad;
+$hover-color: #9fe8df;
+$input-colors: #f3f8fb;
+
 .main{
+    min-height: 100vh;
+    background: #c5e4e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     .container{
-        .calculator-tips{
-            .bill .bill-input #bill::placeholder,
-            .number-peoples .number-peoples-input #number-peoples::placeholder{
-                text-align: end;
-            }
+        max-width: 920px;
 
-            .bill{
-                .bill-input{
-                    #bill{
-                        background: url(/assets/images/icon-dollar.svg) #fff no-repeat;
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+        }
+
+        .container-tips{
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 25px;
+            
+            .calculator-tips{
+                display: flex;
+    
+                .calculator--inputs{
+                    max-width: 340px;
+                    padding:  20px 0;
+                    margin-right: 30px;
+    
+                    .label-inputs{
+                        padding: 0 10px;
+                        margin-bottom: 45px;
+    
+                        .validates{
+                            display: flex;
+                            justify-content: space-between;
+                            color: #748484;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+
+                        .validates.select-tips{
+                            margin-bottom: 20px;
+                        }
+    
+                        .input-box{
+    
+                            input{
+                                border: 0;
+                                outline: 2px solid $input-colors;
+                                border-radius: 5px;
+                                // padding: 15px;
+                                height: 50px;
+                                text-align: end;
+                                background-color: $input-colors !important;
+                                color: $main-color;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100%;
+                                font-size: 32px;
+                            }
+    
+                            input:focus{
+                                outline: 2px solid $secondary-color;
+                            }
+    
+                            #bill{
+                                background: url(/assets/images/icon-dollar.svg) no-repeat left;
+                            }
+    
+                            #number-peoples{
+                                background: url(/assets/images/icon-person.svg) no-repeat left;
+                            }
+    
+                            ::placeholder{
+                                text-align: end;
+                                color: #a3b7b6;
+                            }
+                        }
+    
+                        .tips-input{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+    
+                            input{
+                                width: 100px;
+                                margin-bottom: 15px;
+                                color: #fff;
+                                font-weight: bold;
+                                padding: 5px;
+                                border-radius: 5px;
+                                font-size: 20px;
+                            }
+    
+                            input[type="button"]{
+                                cursor: pointer;
+                                background-color: $main-color;
+                                border: 0;
+                            }
+
+                            input[type="text"]{
+                                color: $main-color;
+                                text-align: center;
+                                background-color: $input-colors;
+                                border: 0;
+                                outline: 2px solid $input-colors;
+                            }
+
+                            input[type="text"]:focus{
+                                outline: 2px solid $secondary-color;
+                            }
+
+                            ::placeholder{
+                                text-align: center;
+                                color: #576f71;
+                            }
+
+                            input:nth-child(4), input:nth-child(5), input:nth-child(6){
+                                margin-bottom: 0;
+                            }
+                        }
                     }
+
+                    .label-inputs:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+    
+                .calculator--outputs{
+                    background: #00474b;
+                    max-width: 320px;
+                    padding: 40px;
+                    border-radius: 15px;
                     
-                }
-            }
-
-            .number-peoples{
-                .number-peoples-input{
-                    #number-peoples{
-                        background: url(/assets/images/icon-person.svg) #fff no-repeat;
+                    .label-result{
+                        display: flex;
+    
+                    }
+    
+                    .reset{
+                        input{
+                            padding: 15px;
+                            width: 100%;
+                            border-radius: 15px;
+                            background: #9fe8df;
+                        }
                     }
                 }
+                
             }
         }
     }

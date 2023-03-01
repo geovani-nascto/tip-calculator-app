@@ -1,26 +1,215 @@
 @import url(/assets/css/imports/imports.css);
-.main .container .calculator-tips .bill .bill-input #bill::-webkit-input-placeholder,
-.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples::-webkit-input-placeholder {
-  text-align: end;
-}
-.main .container .calculator-tips .bill .bill-input #bill:-ms-input-placeholder,
-.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples:-ms-input-placeholder {
-  text-align: end;
-}
-.main .container .calculator-tips .bill .bill-input #bill::-ms-input-placeholder,
-.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples::-ms-input-placeholder {
-  text-align: end;
-}
-.main .container .calculator-tips .bill .bill-input #bill::placeholder,
-.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples::placeholder {
-  text-align: end;
-}
-
-.main .container .calculator-tips .bill .bill-input #bill {
-  background: url(/assets/images/icon-dollar.svg) #fff no-repeat;
+.main {
+  min-height: 100vh;
+  background: #c5e4e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.main .container .calculator-tips .number-peoples .number-peoples-input #number-peoples {
-  background: url(/assets/images/icon-person.svg) #fff no-repeat;
+.main .container {
+  max-width: 920px;
+}
+
+.main .container .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 60px;
+}
+
+.main .container .container-tips {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 25px;
+}
+
+.main .container .container-tips .calculator-tips {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs {
+  max-width: 340px;
+  padding: 20px 0;
+  margin-right: 30px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs {
+  padding: 0 10px;
+  margin-bottom: 45px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .validates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #748484;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .validates.select-tips {
+  margin-bottom: 20px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box input {
+  border: 0;
+  outline: 2px solid #f3f8fb;
+  border-radius: 5px;
+  height: 50px;
+  text-align: end;
+  background-color: #f3f8fb !important;
+  color: #00474b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-size: 32px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box input:focus {
+  outline: 2px solid #26c2ad;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box #bill {
+  background: url(/assets/images/icon-dollar.svg) no-repeat left;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box #number-peoples {
+  background: url(/assets/images/icon-person.svg) no-repeat left;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box ::-webkit-input-placeholder {
+  text-align: end;
+  color: #a3b7b6;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box :-ms-input-placeholder {
+  text-align: end;
+  color: #a3b7b6;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box ::-ms-input-placeholder {
+  text-align: end;
+  color: #a3b7b6;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box ::placeholder {
+  text-align: end;
+  color: #a3b7b6;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input {
+  width: 100px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input[type="button"] {
+  cursor: pointer;
+  background-color: #00474b;
+  border: 0;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input[type="text"] {
+  color: #00474b;
+  text-align: center;
+  background-color: #f3f8fb;
+  border: 0;
+  outline: 2px solid #f3f8fb;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input[type="text"]:focus {
+  outline: 2px solid #26c2ad;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input ::-webkit-input-placeholder {
+  text-align: center;
+  color: #576f71;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input :-ms-input-placeholder {
+  text-align: center;
+  color: #576f71;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input ::-ms-input-placeholder {
+  text-align: center;
+  color: #576f71;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input ::placeholder {
+  text-align: center;
+  color: #576f71;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input:nth-child(4), .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input:nth-child(5), .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input:nth-child(6) {
+  margin-bottom: 0;
+}
+
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs:last-child {
+  margin-bottom: 0;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs {
+  background: #00474b;
+  max-width: 320px;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .label-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .reset input {
+  padding: 15px;
+  width: 100%;
+  border-radius: 15px;
+  background: #9fe8df;
 }
 /*# sourceMappingURL=style.css.map */
