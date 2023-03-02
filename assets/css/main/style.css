@@ -47,14 +47,14 @@
 }
 
 .main .container .container-tips .calculator-tips .calculator--inputs {
-  max-width: 340px;
+  max-width: 400px;
   padding: 20px 0;
   margin-right: 30px;
 }
 
 .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs {
   padding: 0 10px;
-  margin-bottom: 45px;
+  margin-bottom: 50px;
 }
 
 .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .validates {
@@ -69,6 +69,10 @@
   margin-bottom: 10px;
 }
 
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .validates .error {
+  color: #c4897b;
+}
+
 .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .validates.select-tips {
   margin-bottom: 20px;
 }
@@ -77,6 +81,7 @@
   border: 0;
   outline: 2px solid #f3f8fb;
   border-radius: 5px;
+  padding: 15px;
   height: 50px;
   text-align: end;
   background-color: #f3f8fb !important;
@@ -92,6 +97,7 @@
           align-items: center;
   width: 100%;
   font-size: 32px;
+  font-weight: bold;
 }
 
 .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .input-box input:focus {
@@ -138,11 +144,11 @@
 }
 
 .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input {
-  width: 100px;
+  width: 118px;
   margin-bottom: 15px;
   color: #fff;
   font-weight: bold;
-  padding: 5px;
+  padding: 7px;
   border-radius: 5px;
   font-size: 20px;
 }
@@ -189,27 +195,89 @@
   margin-bottom: 0;
 }
 
+.main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input[type='button']:hover {
+  color: #00474b;
+  background-color: #9fe8df;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs:last-child {
   margin-bottom: 0;
 }
 
 .main .container .container-tips .calculator-tips .calculator--outputs {
   background: #00474b;
-  max-width: 320px;
-  padding: 40px;
+  padding: 55px 40px 40px;
   border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.main .container .container-tips .calculator-tips .calculator--outputs .label-result {
+.main .container .container-tips .calculator-tips .calculator--outputs .container-label-results .label-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .container-label-results .label-result .label-result-person {
+  margin-right: 80px;
+  color: #fff;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .container-label-results .label-result .label-result-person h3 {
+  font-size: 16px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .container-label-results .label-result .label-result-person p {
+  font-size: 14px;
+  color: #739a9f;
+  font-weight: bold;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .container-label-results .label-result .result-value {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.main .container .container-tips .calculator-tips .calculator--outputs .reset input {
-  padding: 15px;
+.main .container .container-tips .calculator-tips .calculator--outputs .container-label-results .label-result .result-value h1 {
+  font-size: 45px;
+  color: #26c2ad;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .reset button {
+  padding: 10px;
   width: 100%;
-  border-radius: 15px;
-  background: #9fe8df;
+  border-radius: 5px;
+  background-color: #26c2ad;
+  border: 0;
+  cursor: pointer;
+  color: #00474b;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.main .container .container-tips .calculator-tips .calculator--outputs .reset button:hover {
+  background-color: #9fe8df;
+  color: #00474b;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 /*# sourceMappingURL=style.css.map */
