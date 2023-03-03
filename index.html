@@ -16,34 +16,34 @@
                     <div class="calculator--inputs">
                         <div class="label-inputs">
                             <div class="validates">
-                                <p>Bill</p>
-                                <p class="error">Can't be zero</p>
+                                <label for="bill">Bill</label>
+                                <p class="error" id="error-bill">Can't be zero</p>
                             </div>
                             <div class="input-box">
-                                <input type="text" name="" id="bill" placeholder="0">
+                                <input type="number" name="" id="bill" placeholder="0">
                             </div>
                         </div>
                         <div class="label-inputs">
                             <div class="validates select-tips">
-                                <p>Select Tip %</p>
-                                <p class="error">Can't be zero</p>
+                                <label for="custom">Select Tip %</label>
+                                <p class="error" id="error-tip">Can't be zero</p>
                             </div>
                             <div class="tips-input">
-                                <input type="button" value="5%">
-                                <input type="button" value="10%">
-                                <input type="button" value="15%">
-                                <input type="button" value="25%">
-                                <input type="button" value="50%">
-                                <input type="text" name="" id="custom" placeholder="Custom">
+                                <input type="button" value="5%" id="tip5" onclick="tips5()">
+                                <input type="button" value="10%" id="tip10">
+                                <input type="button" value="15%" id="tip15">
+                                <input type="button" value="25%" id="tip25">
+                                <input type="button" value="50%" id="tip50">
+                                <input type="number" name="" id="custom" placeholder="Custom" onclick="inputCustom()">
                             </div>
                         </div>
                         <div class="label-inputs">
                             <div class="validates">
-                                <p>Number of People</p>
-                                <p class="error">Can't be zero</p>
+                                <label for="number-peoples">Number of People</label>
+                                <p class="error" id="error-number-peoples">Can't be zero</p>
                             </div>
                             <div class="input-box">
-                                <input type="text" name="" id="number-peoples" placeholder="0">
+                                <input type="number" name="" id="number-peoples" placeholder="0">
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
                                     <p>/ person</p>
                                 </div>
                                 <div class="result-value">
-                                    <h1>$0.00</h1>
+                                    <h1 id="label-tip-person">$0.00</h1>
                                 </div>
                             </div>
                             <div class="label-result">
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <div class="reset">
-                            <button type="reset">Reset</button>
+                            <button type="reset" id="reset">Reset</button>
                         </div>
                     </div>
                 </div>

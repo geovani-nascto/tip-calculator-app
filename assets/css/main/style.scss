@@ -54,6 +54,7 @@ $input-colors: #f3f8fb;
                             margin-bottom: 10px;
 
                             .error{
+                                display: none;
                                 color: #c4897b;
                             }
                         }
@@ -120,7 +121,7 @@ $input-colors: #f3f8fb;
                                 border: 0;
                             }
 
-                            input[type="text"]{
+                            input[type="number"]{
                                 color: $main-color;
                                 text-align: center;
                                 background-color: $input-colors;
@@ -128,7 +129,7 @@ $input-colors: #f3f8fb;
                                 outline: 2px solid $input-colors;
                             }
 
-                            input[type="text"]:focus{
+                            input[type="number"]:focus{
                                 outline: 2px solid $secondary-color;
                             }
 
