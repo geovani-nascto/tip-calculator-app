@@ -15,6 +15,7 @@ let errorBillValue = document.getElementById('error-bill');
 let errorTipValue = document.getElementById('error-tip');
 let errorNumberPeoples = document.getElementById('error-number-peoples');
 
+tip5.addEventListener('click', tips5)
 
 function tips5(){
     if(bill >= 5){
