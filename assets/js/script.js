@@ -1,47 +1,66 @@
-//let bill = document.getElementById('bill').value;
-//let billValue = parseInt(bill.value)
 let tip5 = document.getElementById('tip5').value;
 let tip10 = document.getElementById('tip10').value;
 let tip15 = document.getElementById('tip15').value;
 let tip25 = document.getElementById('tip25').value;
 let tip50 = document.getElementById('tip50').value;
-let tipCustom = document.getElementById('custom').value;
-//let numberPeoples = document.getElementById('number-peoples');
-//let numberPeoplesValue = parseInt(numberPeoples.value)
-let labelTipPerson = document.getElementById('label-tip-person');
-let labelTotalPerson = document.getElementById('label-total-person');
+const numberPeoples = parseInt(document.getElementById('number-peoples').value);
+const labelTipPerson = document.getElementById('label-tip-person');
+const labelTotalPerson = document.getElementById('label-total-person');
 let resetButton = document.getElementById('reset');
 let errorBillValue = document.getElementById('error-bill');
 let errorTipValue = document.getElementById('error-tip');
 let errorNumberPeoples = document.getElementById('error-number-peoples');
 
-//tip5.addEventListener('click', tips5)
-
-function tips5(){
+function calculateTip(tipPercentage){
     const bill = parseFloat(document.getElementById('bill').value);
     const numberPeoples = parseInt(document.getElementById('number-peoples').value);
 
-    const tipAmount = (bill * 0.05) / numberPeoples;
-    const totalAmount = (bill + (bill * 0.05)) / numberPeoples;
+    const tipAmount = (bill * (tipPercentage/100)) / numberPeoples;
+    const totalPerson = (bill + (bill * (tipPercentage/100))) / numberPeoples;
 
-    document.getElementById('label-tip-person').innerHTML = `$${tipAmount.toFixed(2)}`;
-    document.querySelector('.label-result:last-child h1').innerHTML = `$${totalAmount.toFixed(2)}`;
+    labelTipPerson.innerHTML = `$${tipAmount.toFixed(2)}`;
+    labelTotalPerson.innerHTML = `$${totalPerson.toFixed(2)}`;
 
+    resetButton.style.backgroundColor = '#26c2ad'
+    resetButton.style.color = '#00474b'
 }
 
-// function custom(porcentagem){
-//     porcent = porcentagem;
-//     inputCustom();
-// }
+document.getElementById('tip5').addEventListener('click', function(){
+    calculateTip(5)
+})
 
-// function inputCustom(){
-//     console.log(tipCustom);
+document.getElementById('tip10').addEventListener('click', function(){
+    calculateTip(10)
+})
 
-//     if(tipCustom > 0){
-//         console.log('Maior que zero')
-//         errorTipValue.style.display = 'none'
+document.getElementById('tip15').addEventListener('click', function(){
+    calculateTip(15)
+})
 
-//     } else{
-//         errorTipValue.style.display = 'block'
-//     }
-// }
+document.getElementById('tip25').addEventListener('click', function(){
+    calculateTip(25)
+})
+
+document.getElementById('tip50').addEventListener('click', function(){
+    calculateTip(50)
+})
+
+document.getElementById('custom').addEventListener('keyup', enterKey)
+
+function enterKey(event){
+    if(event.key === 'Enter'){
+        const tipCustom = parseFloat(document.getElementById('custom').value);
+        calculateTip(tipCustom);
+    }
+}
+
+function reset(){
+    if(labelTipPerson != "$0.00" || labelTotalPerson != "$0.00"){
+        labelTipPerson.innerHTML = "$0.00";
+        labelTotalPerson.innerHTML = "$0.00"
+        resetButton.style.backgroundColor = '#0d686d'
+        resetButton.style.color = '#045d63'
+    } else{
+        console.log('erro')
+    }
+}

@@ -29,12 +29,12 @@
                                 <p class="error" id="error-tip">Can't be zero</p>
                             </div>
                             <div class="tips-input">
-                                <input type="button" value="5%" id="tip5" onclick="tips5()">
+                                <input type="button" value="5%" id="tip5">
                                 <input type="button" value="10%" id="tip10">
                                 <input type="button" value="15%" id="tip15">
                                 <input type="button" value="25%" id="tip25">
                                 <input type="button" value="50%" id="tip50">
-                                <input type="number" name="" id="custom" placeholder="Custom" onclick="inputCustom()">
+                                <input type="number" name="" id="custom" placeholder="Custom">
                             </div>
                         </div>
                         <div class="label-inputs">
@@ -64,12 +64,12 @@
                                     <p>/ person</p>
                                 </div>
                                 <div class="result-value">
-                                    <h1>$0.00</h1>
+                                    <h1 id="label-total-person">$0.00</h1>
                                 </div>
                             </div>
                         </div>
                         <div class="reset">
-                            <button type="reset" id="reset">Reset</button>
+                            <button type="reset" id="reset" onclick="reset()">Reset</button>
                         </div>
                     </div>
                 </div>
