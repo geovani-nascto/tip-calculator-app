@@ -249,6 +249,13 @@ $input-colors: #f3f8fb;
     // .calculator-tips{
     //     flex-direction: column;
     // }
+    .main{
+        border-radius: 0 0 25px 25px;
+    }
+
+    .container{
+        max-width: 100%;
+    }
 
     .main .container .container-tips .calculator-tips .calculator--inputs .label-inputs .tips-input input{
         // width: 155px;

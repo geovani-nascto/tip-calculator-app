@@ -15,23 +15,13 @@ function calculateTip(tipPercentage){
     const bill = parseFloat(document.getElementById('bill').value);
     const numberPeoples = parseInt(document.getElementById('number-peoples').value);
 
-    if(bill <= 0){
-        errorBillValue.style.display = 'block';
-        errorNumberPeoples.style.display = 'block';
-    }
-
-    if(bill <= 0 && numberPeoples <= 0){
-        errorBillValue.style.display = 'block';
-        errorNumberPeoples.style.display = 'block';
-    } else if(bill.toString().trim() && numberPeoples.toString().trim()){
+    if((bill <= 0 || bill.toString().trim() === "") && (numberPeoples <= 0 || numberPeoples.toString().trim() === "")){
         errorBillValue.style.display = 'block';
         errorNumberPeoples.style.display = 'block';
     } else if (bill <= 0 && numberPeoples > 0){
         errorBillValue.style.display = 'block';
-        errorNumberPeoples.style.display = 'none';
     } else if(numberPeoples <= 0 && bill > 0){
         errorNumberPeoples.style.display = 'block';
-        errorBillValue.style.display = 'none';
     } else{
         const tipAmount = (bill * (tipPercentage/100)) / numberPeoples;
         const totalPerson = (bill + (bill * (tipPercentage/100))) / numberPeoples;
