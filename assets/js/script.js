@@ -15,14 +15,33 @@ function calculateTip(tipPercentage){
     const bill = parseFloat(document.getElementById('bill').value);
     const numberPeoples = parseInt(document.getElementById('number-peoples').value);
 
-    const tipAmount = (bill * (tipPercentage/100)) / numberPeoples;
-    const totalPerson = (bill + (bill * (tipPercentage/100))) / numberPeoples;
+    if(bill <= 0){
+        errorBillValue.style.display = 'block';
+        errorNumberPeoples.style.display = 'block';
+    }
 
-    labelTipPerson.innerHTML = `$${tipAmount.toFixed(2)}`;
-    labelTotalPerson.innerHTML = `$${totalPerson.toFixed(2)}`;
+    if(bill <= 0 && numberPeoples <= 0){
+        errorBillValue.style.display = 'block';
+        errorNumberPeoples.style.display = 'block';
+    } else if(bill.toString().trim() && numberPeoples.toString().trim()){
+        errorBillValue.style.display = 'block';
+        errorNumberPeoples.style.display = 'block';
+    } else if (bill <= 0 && numberPeoples > 0){
+        errorBillValue.style.display = 'block';
+        errorNumberPeoples.style.display = 'none';
+    } else if(numberPeoples <= 0 && bill > 0){
+        errorNumberPeoples.style.display = 'block';
+        errorBillValue.style.display = 'none';
+    } else{
+        const tipAmount = (bill * (tipPercentage/100)) / numberPeoples;
+        const totalPerson = (bill + (bill * (tipPercentage/100))) / numberPeoples;
 
-    resetButton.style.backgroundColor = '#26c2ad'
-    resetButton.style.color = '#00474b'
+        labelTipPerson.innerHTML = `$${tipAmount.toFixed(2)}`;
+        labelTotalPerson.innerHTML = `$${totalPerson.toFixed(2)}`;
+
+        resetButton.style.backgroundColor = '#26c2ad'
+        resetButton.style.color = '#00474b'
+    }
 }
 
 document.getElementById('tip5').addEventListener('click', function(){
