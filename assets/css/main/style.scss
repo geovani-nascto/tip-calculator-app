@@ -1,4 +1,13 @@
-@import url(/assets/css/imports/imports.css);;
+//@import url(/assets/css/imports/imports.css);;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace, 'Arial', 'sans-serif';
+}
 
 $main-color: #00474b;
 $secondary-color: #26c2ad;

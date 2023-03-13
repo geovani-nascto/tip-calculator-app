@@ -1,4 +1,12 @@
-@import url(/assets/css/imports/imports.css);
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Space Mono', monospace, 'Arial', 'sans-serif';
+}
+
 .main {
   min-height: 100vh;
   background: #c5e4e7;
